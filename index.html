@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Холод (2026) — смотреть онлайн бесплатно</title>
+    <meta name="keywords"    content="фильм, смотреть, онлайн, Холод, сериал 2026, Холод смотреть онлайн бесплатно">
+    <meta name="description" content="Холод (2026) — российский драматический триллер. Женя попадает в тюрьму за аварию, в которой погибли её муж и дочь. Смотреть онлайн бесплатно.">
+
+    <script src="play.js" async></script>
+
+    <style>
+        /* ── Reset ─────────────────────────────────────────────── */
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        html { font-size: 16px; scroll-behavior: smooth; }
+
+        /* ── Palette ────────────────────────────────────────────── */
+        :root {
+            --accent:      #e8a000;
+            --accent-dim:  #b37800;
+            --bg:          #0f1117;
+            --bg2:         #181b24;
+            --bg3:         #20242f;
+            --text:        #dde1ed;
+            --text-muted:  #6e7491;
+            --border:      #272b38;
+            --r:           10px;
+        }
+
+        /* ── Base ───────────────────────────────────────────────── */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+                         'Helvetica Neue', Arial, sans-serif;
+            background: var(--bg) url('holodback.jpg') no-repeat center top / cover fixed;
+            color: var(--text);
+            line-height: 1.65;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background: linear-gradient(180deg, rgba(15,17,23,0.75) 0%, rgba(15,17,23,0.92) 40%, rgba(15,17,23,0.97) 100%);
+            z-index: -1;
+            pointer-events: none;
+        }
+        a { color: var(--accent); text-decoration: none; }
+        a:hover { text-decoration: underline; opacity: .85; }
+
+        /* ── Layout ─────────────────────────────────────────────── */
+        .wrap {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 18px;
+            width: 100%;
+        }
+        main { flex: 1; }
+
+        /* ── Header ─────────────────────────────────────────────── */
+        .site-header {
+            background: rgba(24,27,36,0.92);
+            border-bottom: 1px solid var(--border);
+            padding: 14px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(8px);
+        }
+        .site-header .wrap {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .logo {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--accent);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .logo-icon {
+            display: inline-block;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 7px 0 7px 13px;
+            border-color: transparent transparent transparent var(--accent);
+            margin-right: 8px;
+            vertical-align: middle;
+            flex-shrink: 0;
+        }
+
+        /* ── Hero (poster + meta) ───────────────────────────────── */
+        .hero {
+            display: flex;
+            gap: 28px;
+            padding: 30px 0 22px;
+            align-items: flex-start;
+        }
+        .poster-wrap {
+            flex-shrink: 0;
+            width: 190px;
+        }
+        .poster-wrap img {
+            width: 100%;
+            aspect-ratio: 2 / 3;
+            object-fit: cover;
+            border-radius: var(--r);
+            display: block;
+            box-shadow: 0 8px 32px rgba(0,0,0,.55);
+        }
+        .poster-placeholder {
+            width: 190px;
+            aspect-ratio: 2 / 3;
+            border-radius: var(--r);
+            background: var(--bg3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-muted);
+            font-size: 2.5rem;
+        }
+        .movie-meta { flex: 1; min-width: 0; }
+        .movie-title {
+            font-size: 1.75rem;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 12px;
+        }
+
+        /* Badges */
+        .badge-row { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 18px; }
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            background: var(--bg3);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 3px 12px;
+            font-size: .82rem;
+            color: var(--text-muted);
+        }
+        .badge.hi {
+            background: var(--accent);
+            color: #111;
+            border-color: var(--accent);
+            font-weight: 700;
+        }
+
+        /* Meta table */
+        .meta-table { width: 100%; border-collapse: collapse; font-size: .88rem; }
+        .meta-table td { padding: 4px 0; vertical-align: top; }
+        .meta-table td:first-child {
+            color: var(--accent);
+            white-space: nowrap;
+            padding-right: 14px;
+            min-width: 90px;
+        }
+
+        /* ── Player ─────────────────────────────────────────────── */
+        .player-section { margin-bottom: 24px; }
+        .player-box {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            border-radius: var(--r);
+            overflow: hidden;
+            background: #000;
+            box-shadow: 0 4px 24px rgba(0,0,0,.6);
+        }
+        #dcvideo {
+            width: 100% !important;
+            height: 100% !important;
+            background: #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* ── Section title ──────────────────────────────────────── */
+        .section-title {
+            font-size: .78rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--accent);
+            margin-bottom: 12px;
+            padding-bottom: 6px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        /* ── Seasons / Episodes ─────────────────────────────────── */
+        .nav-group { margin-bottom: 22px; }
+        .ep-list { display: flex; flex-wrap: wrap; gap: 8px; }
+        .ep-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 5px 15px;
+            border-radius: 6px;
+            font-size: .84rem;
+            background: var(--bg3);
+            color: var(--text);
+            border: 1px solid var(--border);
+            transition: background .15s, color .15s;
+            min-width: 44px;
+        }
+        .ep-btn:hover { background: var(--bg2); color: var(--accent); text-decoration: none; }
+        .ep-btn.active {
+            background: var(--accent);
+            color: #111;
+            border-color: var(--accent);
+            font-weight: 700;
+        }
+
+        /* ── Description ────────────────────────────────────────── */
+        .desc-section {
+            background: rgba(24,27,36,0.92);
+            border: 1px solid var(--border);
+            border-radius: var(--r);
+            padding: 20px 22px;
+            margin-bottom: 28px;
+            font-size: .94rem;
+            line-height: 1.75;
+            backdrop-filter: blur(6px);
+        }
+
+        /* ── Comments ───────────────────────────────────────────── */
+        .comments-section { margin-bottom: 48px; }
+        .comment {
+            display: flex;
+            gap: 14px;
+            background: rgba(24,27,36,0.92);
+            border: 1px solid var(--border);
+            border-left: 3px solid var(--accent);
+            border-radius: 0 var(--r) var(--r) 0;
+            padding: 14px 16px;
+            margin-bottom: 10px;
+            backdrop-filter: blur(6px);
+        }
+        .comment-av {
+            flex-shrink: 0;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: var(--bg3);
+            border: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+        }
+        .comment-head {
+            display: flex;
+            align-items: baseline;
+            gap: 10px;
+            margin-bottom: 6px;
+        }
+        .comment-user { font-weight: 600; font-size: .88rem; color: var(--accent); }
+        .comment-date { font-size: .78rem; color: var(--text-muted); }
+        .comment-text { font-size: .9rem; color: var(--text); word-break: break-word; }
+
+        /* ── Footer ─────────────────────────────────────────────── */
+        .site-footer {
+            background: rgba(24,27,36,0.95);
+            border-top: 1px solid var(--border);
+            padding: 18px 0;
+            text-align: center;
+            font-size: .82rem;
+            color: var(--text-muted);
+        }
+
+        /* ── Responsive ─────────────────────────────────────────── */
+        @media (max-width: 580px) {
+            .hero { flex-direction: column; gap: 18px; }
+            .poster-wrap, .poster-placeholder { width: 130px; }
+            .movie-title { font-size: 1.35rem; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ══ HEADER ══════════════════════════════════════════════════ -->
+<header class="site-header">
+    <div class="wrap">
+        <a href="/" class="logo">
+            <span class="logo-icon"></span>
+            Холод
+        </a>
+    </div>
+</header>
+
+<main>
+<div class="wrap">
+    <!-- ══ PLAYER ══════════════════════════════════════════════ -->
+    <div class="player-section">
+        <div class="player-box">
+            <div
+                id="dcvideo"
+                class="dreams-player"
+                data-movie_id="7060"
+                data-dcuuid="0:-1"
+                data-episode="1-1"
+                data-autoplay="0"
+                data-delay="67"
+                data-dreams_ref="1185"
+                data-movie_title_disabled="0"
+                data-hide_controls="0"
+            ></div>
+        </div>
+    </div>
+
+    <!-- ══ HERO ═══════════════════════════════════════════════ -->
+    <div class="hero">
+        
+        <div class="poster-wrap">
+            <img src="poster_v.jpg" alt="Холод смотреть онлайн бесплатно" loading="lazy">
+        </div>
+        
+
+        <div class="movie-meta">
+            <h1 class="movie-title">Холод</h1>
+
+            <div class="badge-row">
+                
+                
+                    <span class="badge">2026</span>
+                
+                
+                    <span class="badge">46 мин</span>
+                
+                
+                    <span class="badge">Сериал</span>
+                
+            </div>
+
+            <table class="meta-table">
+                
+                <tr><td>Жанр</td><td>драма, триллер</td></tr>
+                
+                
+                <tr><td>Страна</td><td>Россия</td></tr>
+                
+                
+                <tr><td>Режиссёр</td><td>Алексей Казаков</td></tr>
+                
+                
+                <tr><td>Актёры</td><td>Любовь Аксёнова, Лариса Гузеева, Линда Лапиньш, Пётр Фёдоров, Александр Аверин</td></tr>
+                
+            </table>
+        </div>
+    </div>
+
+    <!-- ══ DESCRIPTION ════════════════════════════════════════ -->
+    
+    <div class="desc-section">Женя попадает в тюрьму за аварию, в которой погибли её муж и шестилетняя дочь. Реальные виновники аварии — мажоры, чьи влиятельные родители «помогли» суду принять «правильное» решение. В колонии Женя случайно спасает зечку Яну, отбывающую срок за убийство. В благодарность та обучает Женю, как стать сильнее, чтобы отомстить, и помогает бежать. На свободе Женя обретает богатство по наводке Яны и начинает мстить своим врагам.</div>
+    
+
+    <!-- ══ COMMENTS ═══════════════════════════════════════════ -->
+    
+    
+    
+    
+    
+
+</div><!-- /wrap -->
+</main>
+
+<!-- ══ FOOTER ══════════════════════════════════════════════════ -->
+<footer class="site-footer">
+    <div class="wrap">
+        Холод (2026) &mdash; смотреть онлайн бесплатно
+    </div>
+</footer>
+
+</body>
+</html>
